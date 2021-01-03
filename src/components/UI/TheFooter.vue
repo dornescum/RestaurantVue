@@ -18,7 +18,7 @@
       <li>
         <a href="#">
           <BIconTelephoneFill></BIconTelephoneFill>
-          {{ phoneNumber }}
+            {{ phoneNumber }}
         </a>
       </li>
     </ul>
@@ -47,11 +47,15 @@ export default {
 <style scoped>
 #footer {
   background-color: var(--clr-black);
+  padding: 10px 0;
+  justify-content: center;
+  align-items: center;
 }
 
 #footer ul {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   color: var(--white);
   padding: 10px;
   margin: 0;
@@ -61,18 +65,35 @@ export default {
   list-style-type: none;
 }
 
+#footer ul li a{
+  color: var(--clr-bluePrimary);
+  font-size: 14px;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+}
+
 #butonModal {
   padding: 2px;
   border: none;
   border-color: black;
   background-color: #1f1f1f;
+  font-size: 18px;
 }
 
 #butonModal:active {
   box-shadow: none;
-
   border-color: red;
   background-color: #1f1f1f;
+}
+
+@media (max-width: 600px) {
+  #butonModal {
+    padding: 2px;
+    font-size: 11px;
+  }
+  #footer{
+    padding: 5px 0;
+  }
 }
 input{
   width: 100%;

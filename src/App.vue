@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <div id="nav">
+<!--    <div id="nav">-->
       <Navbar></Navbar>
 <!--      <router-link to="/">Home</router-link> |-->
 <!--      <router-link to="/about">About</router-link>-->
-    </div>
+<!--    </div>-->
     <router-view/>
     <TheFooter></TheFooter>
 
@@ -91,14 +91,14 @@ export default{
 
 }
 
-#nav a {
-  font-weight: bold;
-  color: red;
-}
+/*#nav a {*/
+/*  font-weight: bold;*/
+/*  color: red;*/
+/*}*/
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+/*#nav a.router-link-exact-active {*/
+/*  color: #42b983;*/
+/*}*/
 
 
 

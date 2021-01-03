@@ -1,79 +1,78 @@
 <template>
-  <div id="menu-card">
+  <section id="menu-card">
     <b-container>
       <b-row align-v="center">
-        <b-col md="4">
+        <b-col>
           <b-card
-                  :title="name"
-                  img-src="https://picsum.photos/600/300/?image=25"
-                  img-alt="Image"
-                  img-top
-                  tag="article"
-                  style="max-width: 20rem;"
-
-
+              :title="name"
+              :img-src="img"
+              img-alt="Image"
+              img-top
+              tag="article"
+              :footer="chef"
           >
             <b-card-text v-text="description">
               <!--          Some quick example text to build on the card title and make up the bulk of the card's content.-->
             </b-card-text>
 
-            <b-button href="#" variant="primary">Go somewhere</b-button>
+
           </b-card>
         </b-col>
       </b-row>
-<!--      <b-row>-->
-<!--        <b-col>-->
-<!--          <b-col md="4">-->
-<!--            <b-card-->
-<!--                :title="name"-->
-<!--                img-src="https://picsum.photos/600/300/?image=25"-->
-<!--                img-alt="Image"-->
-<!--                img-top-->
-<!--                tag="article"-->
-<!--                style="max-width: 20rem;"-->
-
-
-<!--            >-->
-<!--              <b-card-text v-text="description">-->
-<!--                &lt;!&ndash;          Some quick example text to build on the card title and make up the bulk of the card's content.&ndash;&gt;-->
-<!--              </b-card-text>-->
-
-<!--              <b-button href="#" variant="primary">Go somewhere</b-button>-->
-<!--            </b-card>-->
-<!--          </b-col>-->
-<!--        </b-col>-->
-<!--        <b-col>2 of 3</b-col>-->
-<!--        <b-col>3 of 3</b-col>-->
-<!--      </b-row>-->
-
     </b-container>
+  </section>
 
-  </div>
 
 </template>
 
 <script>
 export default {
-name: "HomeMenu",
-  props:['id', 'name', 'description'],
-  data(){
-  return{
-    // menuItems: [{
-    //   id:1, name:'some food',
-    //   textDescription: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. In optio recusandae veritatis. Aliquam asperiores consequatur laboriosam natus odio, reiciendis voluptatem!`
-    // }]
-  }
+  name: "HomeMenu",
+  props: ['id', 'name', 'description', 'img', "chef"],
+  data() {
+    return {
+      // menuItems: [{
+      //   id:1, name:'some food',
+      //   textDescription: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. In optio recusandae veritatis. Aliquam asperiores consequatur laboriosam natus odio, reiciendis voluptatem!`
+      // }]
+    }
   }
 }
 </script>
 
 <style scoped>
+
 #menu-card {
-  /*display: flex;*/
+  display: flex;
+  flex-direction: row;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   margin: 1rem;
   border-radius: 10px;
-  padding: 1rem;
-  /*text-align: center;*/
+  padding: 0.5rem;
+  text-align: center;
+  background-color: var(--clr-grey-10);
+
+}
+@media (max-width: 1600px) {
+  #menu-card {
+    font-size: 16px;
+    padding:12px 8px;
+    /*background-color: green;*/
+
+  }
+}
+
+@media (max-width: 1200px) {
+  #menu-card {
+    font-size: 16px;
+    padding:12px 8px;
+    /*background-color: red;*/
+  }
+}
+@media (max-width: 800px) {
+  #menu-card {
+    font-size: 14px;
+    padding:12px 8px;
+  }
 }
 </style>
