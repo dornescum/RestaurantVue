@@ -2,8 +2,11 @@
   <section id="user-goals">
     <h2 class="pb-2">Make a Reservation</h2>
     <div class="mb-1">
+
       <input type="number" v-model="howManyPersons" placeholder="  number of persons" class="mb-1">
+     <keep-alive>
       <input type="text" v-model="alergiesNotification" placeholder="  alergies">
+     </keep-alive>
     </div>
     <div>
       <input type="number" v-model="inputNumber" placeholder="  enter phone" class="mb-1">
@@ -125,19 +128,21 @@ export default {
 }
 
 #user-goals ul {
+  border: 1px solid #dee2e6;
   list-style: none;
   margin: 1rem 0;
   padding: 0;
+  border-radius: var(--radius);
 }
 
 #user-goals li {
   margin: 16px 0;
   font-size: 18px;
-  font-weight: bold;
-  background-color: var(--clr-grey-9);
+  font-style: italic;
+  /*background-color: var(--clr-grey-9);*/
   padding: 0.5rem;
   color: #1f1f1f;
-  border-radius: var(--transition);
+  /*border-radius: var(--transition);*/
 }
 
 #user-goals input {

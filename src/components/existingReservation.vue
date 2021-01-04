@@ -20,7 +20,7 @@ export default {
     return {
       classObject: {
         active: true,
-        textDanger: true,
+        'text-danger': true,
       },
       // enteredReservation:
       //   {
