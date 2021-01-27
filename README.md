@@ -23,3 +23,6 @@ yarn lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 # RestaurantVue
+
+link amazon:
+http://vuejs-restaurant.s3-website.eu-west-3.amazonaws.com/
